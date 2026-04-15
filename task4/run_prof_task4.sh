@@ -9,4 +9,6 @@
 #SBATCH --constraint="gpunode,TitanX"
 #SBATCH --gres=gpu:1
 
+module load cuda12.6/toolkit
+
 nvprof ./task4/task4
