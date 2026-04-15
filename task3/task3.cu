@@ -76,7 +76,7 @@ int verify(float *gpu_C, float *cpu_C, int total, int num_check) {
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
-int main() {
+int main(int argc, char* argv[]) {
   int N = 512, K = 512, M = 512;
 
   size_t size_A = N * K * sizeof(float);
@@ -133,6 +133,10 @@ int main() {
   // =====================================================================
   // Kernel launch configuration
   // =====================================================================
+  if (argc < 2) {
+    printf("Usage: %s <block_size>\n", argv[0]);
+    return 1;
+  }
   int block_size = atoi(argv[1]);
 
   dim3 blockDim(block_size, block_size);
