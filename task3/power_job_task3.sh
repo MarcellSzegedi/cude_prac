@@ -1,6 +1,6 @@
 #!/bin/bash
 
-block_dims = (16 32 64)
+block_dims=(16 32 64)
 
 for block_dim in "${block_dims[@]}"
 do
