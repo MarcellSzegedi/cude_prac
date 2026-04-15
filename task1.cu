@@ -201,8 +201,8 @@ int main() {
   // STEP 5: Free device memory
   // =====================================================================
 
-  cudaFree(d_A)
-  cudaFree(d_C)
+  cudaFree(d_A);
+  cudaFree(d_C);
 
   // =====================================================================
   print_result(h2d_ok, d2h_ok);
