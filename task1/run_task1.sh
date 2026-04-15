@@ -9,4 +9,4 @@
 #SBATCH --constraint="gpunode,TitanX"
 #SBATCH --gres=gpu:1
 
-./task1
+./task1/task1
