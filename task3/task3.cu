@@ -133,7 +133,9 @@ int main() {
   // =====================================================================
   // Kernel launch configuration
   // =====================================================================
-  dim3 blockDim(16, 16);
+  int block_size = atoi(argv[1]);
+
+  dim3 blockDim(block_size, block_size);
   dim3 gridDim((N + blockDim.x -1) / blockDim.x, (M + blockDim.y - 1) / blockDim.y);
 
   printf("Launch config:     grid(%d,%d), block(%d,%d)\n", gridDim.x, gridDim.y,
